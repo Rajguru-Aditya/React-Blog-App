@@ -3,9 +3,11 @@
   height: 50px;
   position: sticky;
   top: 0;
+  background-color: #fff;
   display: flex;
   align-items: center;
   font-family: "Josefin Sans", sans-serif;
+  z-index: 100;
 }
 
 .topLeft,
