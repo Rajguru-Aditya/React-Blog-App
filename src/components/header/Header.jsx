@@ -5,12 +5,12 @@ function Header() {
   return (
     <div className="header">
       <div className="headerTitles">
-        <span className="headerTitleSm">React & Node</span>
+        <span className="headerTitleSm">Welcome to</span>
         <span className="headerTitleLg">Blog</span>
       </div>
       <img
         className="headerImg"
-        src="https://images.pexels.com/photos/105813/pexels-photo-105813.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+        src="https://images.pexels.com/photos/6992/forest-trees-northwestisbest-exploress.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
         alt="Header"
       />
     </div>
