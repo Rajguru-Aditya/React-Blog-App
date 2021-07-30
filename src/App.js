@@ -1,7 +1,8 @@
 import React from "react";
 import TopBar from "./components/topBar/TopBar";
+import Login from "./pages/login/Login";
 // import Write from "./components/write/Write";
-import Settings from "./pages/settings/Settings";
+// import Settings from "./pages/settings/Settings";
 // import Home from "./pages/home/Home";
 // import Single from "./pages/single/Single";
 
@@ -10,7 +11,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <TopBar />
-        <Settings />
+        <Login />
       </header>
     </div>
   );
