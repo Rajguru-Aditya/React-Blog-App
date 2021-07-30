@@ -58,3 +58,13 @@
   color: #666;
   margin-left: 15px;
 }
+
+.topListItem:hover {
+  transform: translateY(-5px);
+  transition: all 0.4s ease;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
