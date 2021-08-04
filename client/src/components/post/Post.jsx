@@ -1,36 +1,34 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./post.css";
 
-const Post = () => {
+const Post = ({ post }) => {
   return (
     <div className="post">
-      <img
-        className="postImg"
-        src="https://images.unsplash.com/photo-1627478584302-18a30a4f5af8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=644&q=80"
-        alt="Post"
-      />
+      {post.image ? (
+        <img className="postImg" src={post.image} alt={post.title} />
+      ) : (
+        <img
+          className="postImg"
+          src="https://images.unsplash.com/photo-1585664811087-47f65abbad64?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt={post.title}
+        />
+      )}
       <div className="postInfo">
         <div className="postCategories">
-          <span className="postCategory">Music</span>
-          <span className="postCategory">Life</span>
+          {post.categories.map((category) => (
+            <span className="postCategory">{category.name}</span>
+          ))}
         </div>
-        <span className="postTitle">Lorem ipsum dolor, sit amet</span>
+        <Link to={`/post/${post._id}`} className="link">
+          <span className="postTitle">{post.title}</span>
+        </Link>
         <hr />
-        <span className="postDate">1 hr ago</span>
+        <span className="postDate">
+          {new Date(post.createdAt).toDateString()}
+        </span>
       </div>
-      <p className="postDesc">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iusto
-        obcaecati blanditiis minima cum voluptatem. Vitae praesentium quidem
-        neque ipsum culpa consequatur similique delectus, obcaecati dolore
-        voluptatem assumenda dolorum maxime. Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Nemo iusto obcaecati blanditiis minima cum
-        voluptatem. Vitae praesentium quidem neque ipsum culpa consequatur
-        similique delectus, obcaecati dolore voluptatem assumenda dolorum
-        maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-        iusto obcaecati blanditiis minima cum voluptatem. Vitae praesentium
-        quidem neque ipsum culpa consequatur similique delectus, obcaecati
-        dolore voluptatem assumenda dolorum maxime.
-      </p>
+      <p className="postDesc">{post.desc}</p>
     </div>
   );
 };

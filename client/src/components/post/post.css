@@ -8,6 +8,7 @@
   height: 280px;
   object-fit: cover;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .postInfo {
