@@ -36,12 +36,12 @@
 
 .writeText {
   font-size: 20px;
-  height: 100vh;
+  height: 20vh;
 }
 
 .writeSubmit {
   position: absolute;
-  top: 150px;
+  top: 350px;
   left: 150px;
   color: #fff;
   background-color: rgb(0, 180, 75);
