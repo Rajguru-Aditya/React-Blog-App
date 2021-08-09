@@ -5,8 +5,8 @@ import "./posts.css";
 const Posts = ({ posts }) => {
   return (
     <div className="posts">
-      {posts.map((p) => (
-        <Post post={p} />
+      {posts.map((p, index, array) => (
+        <Post post={array[array.length - 1 - index]} />
       ))}
     </div>
   );
