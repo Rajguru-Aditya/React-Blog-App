@@ -3,6 +3,7 @@
 }
 
 .headerTitles {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,18 +11,21 @@
   font-family: "Lora", serif;
   font-weight: 700;
   color: rgb(255, 255, 255);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .headerTitleSm {
-  position: absolute;
-  top: 15%;
+  /* position: absolute;
+  top: 15%; */
   font-size: 20px;
   z-index: 9;
 }
 
 .headerTitleLg {
-  position: absolute;
-  top: 18%;
+  /* position: absolute;
+  top: 18%; */
   font-size: 100px;
   z-index: 9;
 }

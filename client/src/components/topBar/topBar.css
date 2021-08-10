@@ -61,7 +61,7 @@
 }
 
 .topListItem:hover {
-  transform: translateY(-5px);
+  color: rgb(0, 255, 191);
   transition: all 0.4s ease;
 }
 
